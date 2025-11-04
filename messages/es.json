@@ -4,7 +4,15 @@
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. y a e k ñ",
     "button": "Haz clic",
     "days": "días",
-    "ageRange": "edad"
+    "ageRange": "edad",
+    "desktop": {
+      "shareYourTrip": "Comparte tu viaje. Encuentra tu grupo. Organiza todo en un solo lugar: grupos, itinerarios y chat privado.",
+      "premiumFeatures": "Los 50 primeros obtendrán funcionalidades Premium de por vida. Únete a la beta y obtén acceso anticipado: crea grupos, publica itinerarios, coordina gastos y tareas, y encuentra personas afines."
+    },
+    "mobile": {
+      "shareYourTrip": "Comparte tu viaje. Encuentra tu grupo.",
+      "premiumFeatures": "Los 50 primeros obtendrán funcionalidades Premium de por vida. "
+    }
   },
   "navbar": {
     "faq": "Preguntas frecuentes",

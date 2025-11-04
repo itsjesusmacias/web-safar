@@ -22,12 +22,12 @@ interface FloatCircleProps extends HTMLAttributes<HTMLDivElement> {
 type Props = FloatCircleProps;
 
 const positionStyles: Record<Position, string> = {
-  "top-left": "top-10 left-10 -translate-x-0 -translate-y-2",
-  "top-right": "top-10 right-10 translate-x-0 -translate-y-2",
-  "bottom-left": "bottom-0 left-10 -translate-x-0 translate-y-1",
-  "bottom-right": "bottom-0 right-10 translate-x-0 translate-y-1",
-  "middle-left": "top-1/2 left-0 -translate-x-46 -translate-y-1/2",
-  "middle-right": "top-1/2 right-0 translate-x-46 -translate-y-1/2",
+  "top-left": "top-10 left-0 -translate-x-0 -translate-y-2",
+  "top-right": "top-10 right-0 translate-x-0 -translate-y-2",
+  "bottom-left": "bottom-0 left-0 -translate-x-0 translate-y-1",
+  "bottom-right": "bottom-0 right-0 translate-x-0 translate-y-1",
+  "middle-left": "top-1/2 left-0 -translate-x-50 -translate-y-1/2",
+  "middle-right": "top-1/2 right-0 translate-x-50 -translate-y-1/2",
 };
 
 export const FloatTrip = ({
