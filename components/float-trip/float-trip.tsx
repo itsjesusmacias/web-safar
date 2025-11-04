@@ -60,7 +60,7 @@ export const FloatTrip = ({
             loading="lazy"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+          <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent">
             <div className="absolute bottom-4 left-3">
               <span className="text-white text-xs font-semibold">
                 {days} {t("days")}
