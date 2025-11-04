@@ -3,6 +3,11 @@
     "title": "Hola Safar",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. y a e k ñ",
     "button": "Haz clic"
+  },
+  "navbar": {
+    "faq": "Preguntas frecuentes",
+    "pricing": "Precio",
+    "howItWorks": "Cómo funciona",
+    "blog": "Blog"
   }
 }
-
