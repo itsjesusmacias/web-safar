@@ -1,15 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Menu } from "lucide-react";
 import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetClose,
-} from "@/components/ui/sheet";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -27,18 +26,18 @@ const NavbarDesktop = () => {
     <div className="hidden w-full items-center justify-center gap-8 md:flex">
       <Link
         href="/"
-        className="text-sm font-medium transition-colors hover:text-primary"
+        className="text-sm font-small transition-colors hover:text-primary"
       >
         {t("faq")}
       </Link>
       <Link
         href="/"
-        className="text-sm font-medium transition-colors hover:text-primary"
+        className="text-sm font-small transition-colors hover:text-primary"
       >
         {t("pricing")}
       </Link>
 
-      <Link href="/" className="flex items-center">
+      <Link href="/" className="flex items-center mx-6">
         <Image
           src="/safar-logo.png"
           alt="Safar"
@@ -50,13 +49,13 @@ const NavbarDesktop = () => {
 
       <Link
         href="/"
-        className="text-sm font-medium transition-colors hover:text-primary"
+        className="text-sm font-small transition-colors hover:text-primary"
       >
         {t("howItWorks")}
       </Link>
       <Link
         href="/"
-        className="text-sm font-medium transition-colors hover:text-primary"
+        className="text-sm font-small transition-colors hover:text-primary"
       >
         {t("blog")}
       </Link>
@@ -65,7 +64,6 @@ const NavbarDesktop = () => {
 };
 
 const NavbarMobile = () => {
-  const [open, setOpen] = useState(false);
   const t = useTranslations("navbar");
 
   return (
@@ -80,28 +78,23 @@ const NavbarMobile = () => {
         />
       </Link>
 
-      <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger asChild>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu className="h-6 w-6" />
             <span className="sr-only">Toggle menu</span>
           </Button>
-        </SheetTrigger>
-        <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-          <nav className="flex flex-col gap-4">
-            {NAV_LINKS.map((link) => (
-              <SheetClose key={link.key} asChild>
-                <Link
-                  href={link.href}
-                  className="text-lg font-medium transition-colors hover:text-primary"
-                >
-                  {t(link.key)}
-                </Link>
-              </SheetClose>
-            ))}
-          </nav>
-        </SheetContent>
-      </Sheet>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className="w-52 p-4 border-gray-400">
+          {NAV_LINKS.map((link) => (
+            <DropdownMenuItem key={link.key} asChild>
+              <Link href={link.href} className="cursor-pointer">
+                {t(link.key)}
+              </Link>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 };
