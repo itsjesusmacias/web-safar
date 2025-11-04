@@ -85,7 +85,7 @@ const NavbarMobile = () => {
             <span className="sr-only">Toggle menu</span>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-52 p-4 border-gray-400">
+        <DropdownMenuContent align="end" className="w-52 p-4 border-gray-100">
           {NAV_LINKS.map((link) => (
             <DropdownMenuItem key={link.key} asChild>
               <Link href={link.href} className="cursor-pointer">
