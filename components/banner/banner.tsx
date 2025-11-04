@@ -23,9 +23,9 @@ export const Banner = async () => {
         </div>
       </section>
 
-      <section className="flex flex-col gap-2 px-6 md:hidden">
+      <section className="flex flex-col gap-2 px-6 md:hidden mb-2">
         <h3 className="text-lg font-bold">{t("mobile.shareYourTrip")}</h3>
-        <p className="text-lg max-w-[260px]">{t("mobile.premiumFeatures")}</p>
+        <p className="text-md max-w-[260px]">{t("mobile.premiumFeatures")}</p>
       </section>
     </>
   );

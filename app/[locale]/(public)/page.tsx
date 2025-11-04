@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/navbar/navbar";
 import { Hero } from "@/components/hero/hero";
 import { Banner } from "@/components/banner/banner";
+import { TripCarousel } from "@/components/trip-carousel/trip-carousel";
 
 export default async function Home() {
   const t = await getTranslations("home");
@@ -12,6 +13,7 @@ export default async function Home() {
         <Navbar />
         <Hero />
         <Banner />
+        <TripCarousel />
       </div>
     </div>
   );
