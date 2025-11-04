@@ -51,12 +51,12 @@ export function BetaSignup() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
-      <div className="flex flex-col gap-4 sm:flex-row">
+      <div className="flex flex-row gap-2 md:gap-4">
         <Select
           value={socialType}
           onValueChange={(value) => setSocialType(value as SocialType)}
         >
-          <SelectTrigger className="w-full md:w-[35%]">
+          <SelectTrigger className="md:w-[35%] bg-background">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -73,7 +73,7 @@ export function BetaSignup() {
           placeholder={getPlaceholder()}
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className="flex-1"
+          className="flex-1 bg-background"
         />
       </div>
 

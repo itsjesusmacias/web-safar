@@ -187,9 +187,9 @@ body {
 @layer utilities {
   .bg-diamond {
     background: radial-gradient(
-      circle at 50% 100%,
-      rgba(255, 56, 92, 0.3) 0%,
-      #ffffff 100%
+      circle at 50% 32%,
+      rgba(255, 56, 92, 0.2) 0%,
+      #ffffff 28%
     );
   }
 }

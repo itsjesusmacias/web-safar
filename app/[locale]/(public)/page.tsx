@@ -6,9 +6,11 @@ export default async function Home() {
   const t = await getTranslations("home");
 
   return (
-    <div className="md:w-[900px] mx-auto">
-      <Navbar />
-      <Hero />
+    <div className="w-full h-screen bg-diamond">
+      <div className="md:w-[900px] mx-auto ">
+        <Navbar />
+        <Hero />
+      </div>
     </div>
   );
 }
