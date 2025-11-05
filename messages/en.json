@@ -7,11 +7,11 @@
     "ageRange": "age range",
     "desktop": {
       "shareYourTrip": "Share your trip. Find your group. Organize everything in one place: groups, itineraries and private chat.",
-      "premiumFeatures": "The first 50 will get Premium features for life. Join the beta and get early access: create groups, publish itineraries, coordinate expenses and tasks, and find compatible people."
+      "premiumFeatures": "The <highlight>first 50 will get Premium features for life.</highlight> Join the beta and get early access: create groups, publish itineraries, coordinate expenses and tasks, and find compatible people."
     },
     "mobile": {
       "shareYourTrip": "Share your trip. Find your group.",
-      "premiumFeatures": "The first 50 will get Premium features for life. Join the beta and get early access: create groups, publish itineraries, coordinate expenses and tasks, and find compatible people."
+      "premiumFeatures": "<highlight>The first 50 will get Premium features for life.</highlight> Join the beta and get early access: create groups, publish itineraries, coordinate expenses and tasks, and find compatible people."
     }
   },
   "navbar": {
