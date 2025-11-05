@@ -5,6 +5,7 @@ import { Banner } from "@/components/banner/banner";
 import { TripCarousel } from "@/components/trip-carousel/trip-carousel";
 import { HowItWorks } from "@/components/how-it-works/how-it-works";
 import { PricingPlans } from "@/components/pricing-plans/pricing-plans";
+import { BlogBanner } from "@/components/blog-banner/blog-banner";
 
 export default async function Home() {
   const t = await getTranslations("home");
@@ -19,6 +20,7 @@ export default async function Home() {
         <HowItWorks />
         <PricingPlans />
       </div>
+      <BlogBanner />
     </div>
   );
 }

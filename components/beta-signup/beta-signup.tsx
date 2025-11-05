@@ -77,7 +77,7 @@ export function BetaSignup() {
         />
       </div>
 
-      <Button type="submit" size="lg" className="w-full">
+      <Button type="submit" size="lg" className="w-full cursor-pointer">
         {t("button")}
       </Button>
     </form>

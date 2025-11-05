@@ -60,7 +60,7 @@ export const PlanCard = ({
       </ul>
 
       <div className="space-y-2">
-        <Button className="w-full" variant="default">
+        <Button className="w-full cursor-pointer" variant="default">
           {buttonText}
         </Button>
       </div>
