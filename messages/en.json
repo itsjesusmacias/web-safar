@@ -106,5 +106,28 @@
       "descriptionPart1": "I wanted to travel, but not alone. I tried communities and apps: compatibility, clarity and order were missing.",
       "descriptionPart2": "That's why I created Safar: it connects like-minded people and turns ideas into real trips with private groups, chat and simple tools."
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "launchDate": {
+      "question": "When will Safar launch?",
+      "answer": "We are in the validation phase. If the reception is positive, our goal is to launch in early 2026 (first quarter). We will notify the waiting list in order of registration."
+    },
+    "projectGoal": {
+      "question": "What is the project's goal?",
+      "answer": "The project's goal is to be able to travel with a group of people. We want anyone to have a space where they can organize their trip and find people to travel with if they wish. There are people who feel lonely or don't have anyone to travel with."
+    },
+    "plansAndPricing": {
+      "question": "Plans and pricing",
+      "answer": "Plans may be adjusted at launch. The first 50 will get lifetime premium features and early access to new features. We will announce any changes transparently before they take effect."
+    },
+    "verification": {
+      "question": "How will we verify the first 50 users?",
+      "answer": "We will contact them before launching the application and speak with them through the provided social network. If there is no response, we will move to the next person until we fill that quota."
+    },
+    "suggestions": {
+      "question": "Suggestions and new features",
+      "answer": "Write to us at itsjesusmacias@gmail.com with the subject \"SAFAR: [your topic]\". We read all proposals and prioritize the most requested ones. Thank you for helping us build Safar."
+    }
   }
 }

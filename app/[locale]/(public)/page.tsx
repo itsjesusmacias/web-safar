@@ -6,6 +6,7 @@ import { TripCarousel } from "@/components/trip-carousel/trip-carousel";
 import { HowItWorks } from "@/components/how-it-works/how-it-works";
 import { PricingPlans } from "@/components/pricing-plans/pricing-plans";
 import { BlogBanner } from "@/components/blog-banner/blog-banner";
+import { FAQContent } from "@/components/faq/faq";
 
 export default async function Home() {
   const t = await getTranslations("home");
@@ -21,6 +22,9 @@ export default async function Home() {
         <PricingPlans />
       </div>
       <BlogBanner />
+      <div className="relative md:w-[850px] mx-auto">
+        <FAQContent />
+      </div>
     </div>
   );
 }
