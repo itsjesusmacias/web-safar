@@ -1,4 +1,4 @@
-import { Amplitude } from "@/analytics/amplitude";
+import { AmplitudeProvider } from "@/analytics/amplitude";
 
 export default function RootLayout({
   children,
@@ -7,7 +7,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Amplitude />
+      <AmplitudeProvider />
       {children}
     </>
   );

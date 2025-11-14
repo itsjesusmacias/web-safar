@@ -27,4 +27,5 @@ class Amplitude {
   }
 }
 
+export const AmplitudeProvider = () => null;
 export default new Amplitude();

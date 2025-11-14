@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Amplitude from "@/analytics/amplitude";
+import { EVENTS } from "@/analytics/analytics-keys";
 
 const NAV_LINKS = [
   { key: "faq", href: "/#faq" },
@@ -19,7 +21,21 @@ const NAV_LINKS = [
   { key: "blog", href: "/" },
 ];
 
-const NavbarDesktop = () => {
+interface NavbarProps {
+  handleClickFAQ: () => void;
+  handleClickPricing: () => void;
+  handleClickHowItWorks: () => void;
+  handleClickBlog: () => void;
+  handleClickLogo: () => void;
+}
+
+const NavbarDesktop = ({
+  handleClickFAQ,
+  handleClickPricing,
+  handleClickHowItWorks,
+  handleClickBlog,
+  handleClickLogo,
+}: NavbarProps) => {
   const t = useTranslations("navbar");
 
   return (
@@ -27,12 +43,14 @@ const NavbarDesktop = () => {
       <Link
         href={NAV_LINKS[0].href}
         className="text-sm font-small transition-colors hover:text-primary max-w-[155px]"
+        onClick={handleClickFAQ}
       >
         {t("faq")}
       </Link>
       <Link
         href={NAV_LINKS[1].href}
         className="text-sm font-small transition-colors hover:text-primary max-w-[155px]"
+        onClick={handleClickPricing}
       >
         {t("pricing")}
       </Link>
@@ -44,18 +62,21 @@ const NavbarDesktop = () => {
           width={80}
           height={40}
           priority
+          onClick={handleClickLogo}
         />
       </Link>
 
       <Link
         href={NAV_LINKS[2].href}
         className="text-sm font-small transition-colors hover:text-primary max-w-[155px]"
+        onClick={handleClickHowItWorks}
       >
         {t("howItWorks")}
       </Link>
       <Link
         href={NAV_LINKS[3].href}
         className="text-sm font-small transition-colors hover:text-primary max-w-[155px]"
+        onClick={handleClickBlog}
       >
         {t("blog")}
       </Link>
@@ -63,8 +84,22 @@ const NavbarDesktop = () => {
   );
 };
 
-const NavbarMobile = () => {
+const NavbarMobile = ({
+  handleClickFAQ,
+  handleClickPricing,
+  handleClickHowItWorks,
+  handleClickBlog,
+  handleClickLogo,
+}: NavbarProps) => {
   const t = useTranslations("navbar");
+
+  const handleClickDictionary: Record<string, () => void> = {
+    faq: handleClickFAQ,
+    pricing: handleClickPricing,
+    howItWorks: handleClickHowItWorks,
+    blog: handleClickBlog,
+    logo: handleClickLogo,
+  };
 
   return (
     <div className="flex w-full items-center justify-between md:hidden">
@@ -75,6 +110,7 @@ const NavbarMobile = () => {
           width={60}
           height={30}
           priority
+          onClick={handleClickLogo}
         />
       </Link>
 
@@ -88,7 +124,11 @@ const NavbarMobile = () => {
         <DropdownMenuContent align="end" className="w-52 p-4 border-gray-100">
           {NAV_LINKS.map((link) => (
             <DropdownMenuItem key={link.key} asChild>
-              <Link href={link.href} className="cursor-pointer">
+              <Link
+                href={link.href}
+                className="cursor-pointer"
+                onClick={handleClickDictionary[link.key]}
+              >
                 {t(link.key)}
               </Link>
             </DropdownMenuItem>
@@ -100,12 +140,41 @@ const NavbarMobile = () => {
 };
 
 export function Navbar() {
+  const handleClickFAQ = () => {
+    Amplitude.track(EVENTS.CLICK_FAQ, {});
+  };
+  const handleClickPricing = () => {
+    Amplitude.track(EVENTS.CLICK_PRICING, {});
+  };
+  const handleClickHowItWorks = () => {
+    Amplitude.track(EVENTS.CLICK_HOW_IT_WORKS, {});
+  };
+  const handleClickBlog = () => {
+    Amplitude.track(EVENTS.CLICK_BLOG, {});
+  };
+
+  const handleClickLogo = () => {
+    Amplitude.track(EVENTS.CLICK_LOGO, {});
+  };
+
   return (
     <nav className="w-full">
       <div className="mx-auto px-[14px] md:max-w-[900px] md:px-0">
         <div className="flex h-16 items-center justify-between">
-          <NavbarMobile />
-          <NavbarDesktop />
+          <NavbarMobile
+            handleClickFAQ={handleClickFAQ}
+            handleClickPricing={handleClickPricing}
+            handleClickHowItWorks={handleClickHowItWorks}
+            handleClickBlog={handleClickBlog}
+            handleClickLogo={handleClickLogo}
+          />
+          <NavbarDesktop
+            handleClickFAQ={handleClickFAQ}
+            handleClickPricing={handleClickPricing}
+            handleClickHowItWorks={handleClickHowItWorks}
+            handleClickBlog={handleClickBlog}
+            handleClickLogo={handleClickLogo}
+          />
         </div>
       </div>
     </nav>
