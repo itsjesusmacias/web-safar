@@ -6,8 +6,8 @@ export default async function PrivacyPage() {
   const t = await getTranslations("privacy");
 
   return (
-    <div className="w-full min-h-screen bg-diamond">
-      <div className="relative md:w-[850px] mx-auto">
+    <div className="flex min-h-screen flex-col bg-diamond">
+      <div className="relative md:w-[850px] mx-auto w-full flex-1">
         <Navbar />
         <section className="py-10 md:py-16 px-4">
           <div className="max-w-3xl mx-auto">
@@ -58,4 +58,3 @@ export default async function PrivacyPage() {
     </div>
   );
 }
-

@@ -3,9 +3,20 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { useCallback } from "react";
+import { EVENTS } from "@/analytics/analytics-keys";
+import Amplitude from "@/analytics/amplitude";
 
 const Footer = () => {
   const t = useTranslations("footer");
+
+  const handleClickInstagram = useCallback(() => {
+    Amplitude.track(EVENTS.CLICK_INSTAGRAM, {});
+  }, []);
+
+  const handleClickPrivacyPolicy = useCallback(() => {
+    Amplitude.track(EVENTS.CLICK_PRIVACY_POLICY, {});
+  }, []);
 
   return (
     <section className="md:py-0 px-4 bg-gray-200">
@@ -18,6 +29,7 @@ const Footer = () => {
             <Link
               href="/privacy"
               className="text-muted-foreground hover:text-foreground transition-colors"
+              onClick={handleClickPrivacyPolicy}
             >
               {t("privacyPolicy")}
             </Link>
@@ -28,6 +40,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-muted-foreground hover:bg-accent p-2 rounded-full transition-colors"
             aria-label="Instagram"
+            onClick={handleClickInstagram}
           >
             <Image
               src="/instagram.svg"
