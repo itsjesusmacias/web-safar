@@ -18,7 +18,7 @@
     "faq": "Preguntas frecuentes",
     "pricing": "Precio",
     "howItWorks": "Cómo funciona",
-    "blog": "Blog"
+    "mission": "Misión"
   },
   "hero": {
     "title": "Encuentra gente compatible para viajar y que el plan ocurra de verdad."
@@ -96,7 +96,7 @@
       }
     }
   },
-  "blogBanner": {
+  "missionBanner": {
     "title": "Safar nace de una necesidad real",
     "readMore": "Leer más",
     "desktop": {
@@ -105,6 +105,25 @@
     "mobile": {
       "descriptionPart1": "Quería viajar, pero no solo. Probé comunidades y apps: faltaba compatibilidad, claridad y orden.",
       "descriptionPart2": "Por eso creé Safar: conecta a personas afines y convierte ideas en viajes reales con grupos privados, chat y herramientas simples."
+    }
+  },
+  "mission": {
+    "title": "¿Por qué quiero crear Safar?",
+    "intro": "No quiero que nadie se quede sin viajar por que no tiene con quien hacerlo. La soledad es dificil hay muchos tipos de soledad y se pasa mal. Con este proyecto quiero ayudar un poco en ese tema.",
+    "aboutMe": {
+      "title": "Hablemos un poco de mi",
+      "content": "Acabo de pasar por una etapa complicada. Ver la realidad de otras personas es complicada y expresarla es aun más dificil.\n\nTengo que reconoceer que me siento solo. Tengo amig@s pero mcuhos tienen compromisos, parejas, hijos, estan trabajando fuera o otros incluso han evolucionado de otra manera y hemos perdudo contacto. Se dice que las personas con las que compartes X % de tu vida son con los compañeros de trabajo, bueno pues yo teletrabajo la mayoria vive fuera de donde residO\n\nNo prentendo quejarme ni victimizarme, hay cosas peores y yo estoy en una situacion muy buena.\n\nLos que me conocen saben que siempre he querido contruir algo, algo que aporte un poco de valor. que ayude a personas.\n\nHace una ssemanas estuve en un evento de empresa en madrid, presencial, y en una conversacion con mi manager me dijo",
+      "quote": "\"pues el viernes me voy a Viena con mi pareja, tienes algun viaje planeado?\"",
+      "contentAfterQuote": "- Pues la verdad que no, me gustaria pero no quiero hacerlo solo\n\nViajar solo no esta mal. Hay quien le encanta hacerlo y ve sus ventajas pero no e slo mio. Admiro produndametne aquien lo hace\n\nVovlendo a casa dije y si creo una plataforma para buscar compañeros ocn los que viajar"
+    },
+    "theIdea": {
+      "title": "La idea",
+      "content": "Un lugar donde puedas encontrar personas afines y organizar viajes sin enredos. Donde todos puedan proponer, editar itinerarios, repartir tareas… y que el plan realmente sucede\n\nQuiero conseguir facilitar las herramitnetas para organizar el viaje\n\nusando IA crear un itirenario",
+      "launchDate": "Mi intencion e sacarlo a mediados de enero de 2026"
+    },
+    "beta": {
+      "title": "Únete a la beta",
+      "description": "Dejame tu contacto y <highlight>Los 50 primeros obtendrán funcionalidades Premium de por vida.</highlight> Únete a la beta y obtén acceso anticipado: crea grupos, publica itinerarios, coordina gastos y tareas, y encuentra personas afines."
     }
   },
   "faq": {

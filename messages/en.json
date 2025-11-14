@@ -18,7 +18,7 @@
     "faq": "FAQ",
     "pricing": "Pricing",
     "howItWorks": "How it works",
-    "blog": "Blog"
+    "mission": "Mission"
   },
   "hero": {
     "title": "Find compatible people to travel with and make the plan happen for real."
@@ -96,7 +96,7 @@
       }
     }
   },
-  "blogBanner": {
+  "missionBanner": {
     "title": "Safar was born from a real need",
     "readMore": "Read more",
     "desktop": {
@@ -105,6 +105,25 @@
     "mobile": {
       "descriptionPart1": "I wanted to travel, but not alone. I tried communities and apps: compatibility, clarity and order were missing.",
       "descriptionPart2": "That's why I created Safar: it connects like-minded people and turns ideas into real trips with private groups, chat and simple tools."
+    }
+  },
+  "mission": {
+    "title": "Why do I want to create Safar?",
+    "intro": "I don't want anyone to miss out on traveling because they don't have someone to do it with. Loneliness is difficult, there are many types of loneliness and it's hard. With this project I want to help a bit with that.",
+    "aboutMe": {
+      "title": "Let's talk a bit about me",
+      "content": "I just went through a complicated stage. Seeing the reality of other people is complicated and expressing it is even more difficult.\n\nI have to acknowledge that I feel alone. I have friends but many have commitments, partners, children, are working abroad or others have even evolved differently and we've lost contact. They say that the people you share X% of your life with are your coworkers, well I work remotely and most of them live outside where I live.\n\nI don't mean to complain or play the victim, there are worse things and I'm in a very good situation.\n\nThose who know me know that I've always wanted to build something, something that adds a bit of value, that helps people.\n\nA few weeks ago I was at a company event in Madrid, in person, and in a conversation with my manager he told me",
+      "quote": "\"well, on Friday I'm going to Vienna with my partner, do you have any trips planned?\"",
+      "contentAfterQuote": "- Well, the truth is no, I'd like to but I don't want to do it alone\n\nTraveling alone is not bad. There are those who love it and see its advantages but it's not for me. I deeply admire those who do it\n\nOn the way home I said what if I create a platform to find travel companions"
+    },
+    "theIdea": {
+      "title": "The idea",
+      "content": "A place where you can find like-minded people and organize trips without complications. Where everyone can propose, edit itineraries, divide tasks... and the plan actually happens\n\nI want to make it easier to organize the trip\n\nusing AI to create an itinerary",
+      "launchDate": "My intention is to launch it by mid-January 2026"
+    },
+    "beta": {
+      "title": "Join the beta",
+      "description": "Leave me your contact and <highlight>The first 50 will get Premium features for life.</highlight> Join the beta and get early access: create groups, publish itineraries, coordinate expenses and tasks, and find like-minded people."
     }
   },
   "faq": {

@@ -18,7 +18,7 @@ const NAV_LINKS = [
   { key: "faq", href: "/#faq" },
   { key: "pricing", href: "/#pricing" },
   { key: "howItWorks", href: "/#how-it-works" },
-  { key: "blog", href: "/" },
+  { key: "mission", href: "/mission" },
 ];
 
 interface NavbarProps {
@@ -78,7 +78,7 @@ const NavbarDesktop = ({
         className="text-sm font-small transition-colors hover:text-primary max-w-[155px]"
         onClick={handleClickBlog}
       >
-        {t("blog")}
+        {t("mission")}
       </Link>
     </div>
   );
