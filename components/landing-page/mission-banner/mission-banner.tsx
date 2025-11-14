@@ -1,3 +1,5 @@
+"use client";
+
 import { Link } from "@/i18n/routing";
 import { Button } from "../../ui/button";
 import Amplitude from "@/analytics/amplitude";
