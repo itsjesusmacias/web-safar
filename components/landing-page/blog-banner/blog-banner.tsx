@@ -1,8 +1,12 @@
-import { getTranslations } from "next-intl/server";
+"use client";
+
 import { Button } from "../../ui/button";
+import Amplitude from "@/analytics/amplitude";
+import { EVENTS } from "@/analytics/analytics-keys";
+import { useTranslations } from "next-intl";
 
 const BlogBanner = async () => {
-  const t = await getTranslations("blogBanner");
+  const t = useTranslations("blogBanner");
 
   return (
     <section className="bg-primary py-10">
@@ -12,6 +16,9 @@ const BlogBanner = async () => {
           <Button
             variant="link"
             className="hidden md:block bg-white text-black rounded-3xl hover:bg-accent hover:text-accent-foreground cursor-pointer"
+            onClick={() =>
+              Amplitude.track(EVENTS.CLICK_READ_MORE_BLOG_BANNER, {})
+            }
           >
             {t("readMore")}
           </Button>
