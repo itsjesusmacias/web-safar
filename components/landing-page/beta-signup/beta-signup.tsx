@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Amplitude from "@/analytics/amplitude";
+import { EVENTS } from "@/analytics/analytics-keys";
 
 type SocialType = "instagram" | "tiktok" | "email";
 
@@ -36,15 +38,16 @@ export function BetaSignup() {
     e.preventDefault();
 
     if (!value.trim()) {
-      alert(t("validationError"));
+      //alert(t("validationError"));
       return;
     }
 
-    const socialTypeLabel = t(`socialTypes.${socialType}`);
-    const message = t("successMessage")
-      .replace("{socialType}", socialTypeLabel)
-      .replace("{value}", value);
-    alert(message);
+    // TODO toast y confetti
+
+    Amplitude.track(EVENTS.SEND_JOIN_THE_BETA_FORM, {
+      socialType,
+      value,
+    });
 
     setValue("");
   };
@@ -77,7 +80,12 @@ export function BetaSignup() {
         />
       </div>
 
-      <Button type="submit" size="lg" className="w-full cursor-pointer">
+      <Button
+        id="confetti-button"
+        type="submit"
+        size="lg"
+        className="w-full cursor-pointer"
+      >
         {t("button")}
       </Button>
     </form>
