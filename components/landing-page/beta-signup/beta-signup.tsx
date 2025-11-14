@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Amplitude from "@/analytics/amplitude";
 import { EVENTS } from "@/analytics/analytics-keys";
+import { createClient } from "@/lib/supabase/client";
 
 type SocialType = "instagram" | "tiktok" | "email";
 
@@ -20,7 +21,7 @@ export function BetaSignup() {
   const t = useTranslations("betaSignup");
   const [socialType, setSocialType] = useState<SocialType>("instagram");
   const [value, setValue] = useState("");
-
+  const supabase = createClient();
   const getPlaceholder = () => {
     switch (socialType) {
       case "instagram":
@@ -34,7 +35,7 @@ export function BetaSignup() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!value.trim()) {
@@ -43,6 +44,16 @@ export function BetaSignup() {
     }
 
     // TODO toast y confetti
+    const { error } = await supabase.from("beta_signups").insert({
+      social_type: socialType,
+      value,
+    });
+
+    if (error) {
+      console.error("Error inserting beta signup", error);
+      // TODO: toast de error
+      return;
+    }
 
     Amplitude.track(EVENTS.SEND_JOIN_THE_BETA_FORM, {
       socialType,
