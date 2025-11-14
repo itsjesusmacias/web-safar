@@ -1,6 +1,11 @@
+"use client";
+
 import { Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Amplitude from "@/analytics/amplitude";
+import { EVENTS } from "@/analytics/analytics-keys";
+import { useCallback } from "react";
 
 interface Feature {
   text: string;
@@ -24,6 +29,15 @@ export const PlanCard = ({
   buttonText,
   isHighlighted = false,
 }: PlanCardProps) => {
+  const handleClick = useCallback(
+    (planKey: string) => {
+      Amplitude.track(EVENTS.CLICK_PRICING_PLAN, {
+        plan: planKey,
+      });
+    },
+    [name]
+  );
+
   return (
     <div
       className={cn(
@@ -60,7 +74,11 @@ export const PlanCard = ({
       </ul>
 
       <div className="space-y-2">
-        <Button className="w-full cursor-pointer" variant="default">
+        <Button
+          className="w-full cursor-pointer"
+          variant="default"
+          onClick={() => handleClick(name)}
+        >
           {buttonText}
         </Button>
       </div>

@@ -10,9 +10,7 @@ enum EVENTS {
   SEND_JOIN_THE_BETA_FORM = "send_join_the_beta_form",
 
   // click on pricing plans
-  CLICK_PRICING_PLAN_BASE = "click_pricing_plan_base",
-  CLICK_PRICING_PLAN_PRO = "click_pricing_plan_pro",
-  CLICK_PRICING_PLAN_MAX = "click_pricing_plan_max",
+  CLICK_PRICING_PLAN = "click_pricing_plan",
 
   // click on read more blog banner
   CLICK_READ_MORE_BLOG_BANNER = "click_read_more_blog_banner",
