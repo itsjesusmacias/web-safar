@@ -1,6 +1,6 @@
 "use client";
 
-import * as AmplitudeClient from "@amplitude/analytics-browser";
+import * as AmplitudeClient from "@amplitude/unified";
 import { EVENTS } from "./analytics-keys";
 
 const AMPLITUDE_API_KEY = process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY!;
@@ -12,9 +12,14 @@ class Amplitude {
 
   private initAmplitude() {
     if (typeof window !== "undefined") {
-      AmplitudeClient.init(AMPLITUDE_API_KEY, {
-        autocapture: true,
+      AmplitudeClient.initAll(AMPLITUDE_API_KEY, {
         serverZone: "EU",
+        analytics: {
+          autocapture: true,
+        },
+        sessionReplay: {
+          sampleRate: 1,
+        },
       });
     }
   }
