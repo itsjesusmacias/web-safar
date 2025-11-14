@@ -5,7 +5,7 @@ import Amplitude from "@/analytics/amplitude";
 import { EVENTS } from "@/analytics/analytics-keys";
 import { useTranslations } from "next-intl";
 
-const BlogBanner = async () => {
+const BlogBanner = () => {
   const t = useTranslations("blogBanner");
 
   return (
