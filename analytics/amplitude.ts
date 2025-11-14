@@ -2,9 +2,11 @@
 
 import * as amplitude from "@amplitude/analytics-browser";
 
+const AMPLITUDE_API_KEY = process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY!;
+
 function initAmplitude() {
   if (typeof window !== "undefined") {
-    amplitude.init("6c75b7a83ddf4da98893d880feef9aba", {
+    amplitude.init(AMPLITUDE_API_KEY, {
       autocapture: true,
       serverZone: "EU",
     });
