@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import Amplitude from "@/analytics/amplitude";
 import { EVENTS } from "@/analytics/analytics-keys";
 import { createClient } from "@/lib/supabase/client";
+import { toast } from "sonner";
 
 type SocialType = "instagram" | "tiktok" | "email";
 
@@ -40,10 +41,12 @@ export function BetaSignup() {
 
     if (!value.trim()) {
       //alert(t("validationError"));
+      toast.error(t("validationError"));
       return;
     }
 
     // TODO toast y confetti
+    /*
     const { error } = await supabase.from("beta_signups").insert({
       social_type: socialType,
       value,
@@ -51,7 +54,7 @@ export function BetaSignup() {
 
     if (error) {
       console.error("Error inserting beta signup", error);
-      // TODO: toast de error
+      //toast.error(t("validationError"));
       return;
     }
 
@@ -59,6 +62,9 @@ export function BetaSignup() {
       socialType,
       value,
     });
+    */
+
+    toast.success(t("successMessage", { socialType, value }));
 
     setValue("");
   };
@@ -91,12 +97,7 @@ export function BetaSignup() {
         />
       </div>
 
-      <Button
-        id="confetti-button"
-        type="submit"
-        size="lg"
-        className="w-full cursor-pointer"
-      >
+      <Button type="submit" size="lg" className="w-full cursor-pointer">
         {t("button")}
       </Button>
     </form>
