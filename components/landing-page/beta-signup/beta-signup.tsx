@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import {
   Select,
@@ -16,6 +16,8 @@ import { EVENTS } from "@/analytics/analytics-keys";
 import { createClient } from "@/lib/supabase/client";
 import { toast } from "sonner";
 
+import JSConfetti from "js-confetti";
+
 type SocialType = "instagram" | "tiktok" | "email";
 
 export function BetaSignup() {
@@ -23,6 +25,19 @@ export function BetaSignup() {
   const [socialType, setSocialType] = useState<SocialType>("instagram");
   const [value, setValue] = useState("");
   const supabase = createClient();
+  const jsConfettiRef = useRef<JSConfetti | null>(null);
+
+  // Inicializar JSConfetti solo una vez cuando el componente se monta
+  useEffect(() => {
+    jsConfettiRef.current = new JSConfetti();
+
+    return () => {
+      // Limpiar el canvas cuando el componente se desmonta
+      if (jsConfettiRef.current) {
+        jsConfettiRef.current.clearCanvas();
+      }
+    };
+  }, []);
   const getPlaceholder = () => {
     switch (socialType) {
       case "instagram":
@@ -39,14 +54,15 @@ export function BetaSignup() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (jsConfettiRef.current) {
+      jsConfettiRef.current.addConfetti();
+    }
+
     if (!value.trim()) {
-      //alert(t("validationError"));
       toast.error(t("validationError"));
       return;
     }
 
-    // TODO toast y confetti
-    /*
     const { error } = await supabase.from("beta_signups").insert({
       social_type: socialType,
       value,
@@ -54,7 +70,7 @@ export function BetaSignup() {
 
     if (error) {
       console.error("Error inserting beta signup", error);
-      //toast.error(t("validationError"));
+      toast.error(t("validationError"));
       return;
     }
 
@@ -62,7 +78,6 @@ export function BetaSignup() {
       socialType,
       value,
     });
-    */
 
     toast.success(t("successMessage", { socialType, value }));
 
