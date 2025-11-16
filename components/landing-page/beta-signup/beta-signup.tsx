@@ -15,8 +15,8 @@ import Amplitude from "@/analytics/amplitude";
 import { EVENTS } from "@/analytics/analytics-keys";
 import { createClient } from "@/lib/supabase/client";
 import { toast } from "sonner";
-
 import JSConfetti from "js-confetti";
+import { useLocalStorage } from "@/hooks/use-local-storage";
 
 type SocialType = "instagram" | "tiktok" | "email";
 
@@ -26,13 +26,15 @@ export function BetaSignup() {
   const [value, setValue] = useState("");
   const supabase = createClient();
   const jsConfettiRef = useRef<JSConfetti | null>(null);
+  const [isBetaSignup, setIsBetaSignup, isBetaSignupLoading] = useLocalStorage(
+    "isBetaSignup",
+    false
+  );
 
-  // Inicializar JSConfetti solo una vez cuando el componente se monta
   useEffect(() => {
     jsConfettiRef.current = new JSConfetti();
 
     return () => {
-      // Limpiar el canvas cuando el componente se desmonta
       if (jsConfettiRef.current) {
         jsConfettiRef.current.clearCanvas();
       }
@@ -54,8 +56,8 @@ export function BetaSignup() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (jsConfettiRef.current) {
-      jsConfettiRef.current.addConfetti();
+    if (isBetaSignup) {
+      return;
     }
 
     if (!value.trim()) {
@@ -81,6 +83,7 @@ export function BetaSignup() {
 
     toast.success(t("successMessage", { socialType, value }));
 
+    setIsBetaSignup(true);
     setValue("");
   };
 
@@ -88,6 +91,7 @@ export function BetaSignup() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
       <div className="flex flex-row gap-2 md:gap-4">
         <Select
+          disabled={isBetaSignup}
           value={socialType}
           onValueChange={(value) => setSocialType(value as SocialType)}
         >
@@ -104,6 +108,7 @@ export function BetaSignup() {
         </Select>
 
         <Input
+          disabled={isBetaSignup}
           type={socialType === "email" ? "email" : "text"}
           placeholder={getPlaceholder()}
           value={value}
@@ -112,7 +117,12 @@ export function BetaSignup() {
         />
       </div>
 
-      <Button type="submit" size="lg" className="w-full cursor-pointer">
+      <Button
+        type="submit"
+        size="lg"
+        className="w-full cursor-pointer"
+        disabled={isBetaSignup}
+      >
         {t("button")}
       </Button>
     </form>
