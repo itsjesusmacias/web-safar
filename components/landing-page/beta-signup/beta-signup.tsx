@@ -100,15 +100,19 @@ export function BetaSignup() {
 
   if (isSubmitted) {
     return (
-      <div className="flex flex-col gap-2 text-center mt-2">
-        <h1 className="text-2xl font-bold">{t("thankYouTitle")}</h1>
+      <div className="flex flex-col gap-2 text-center mt-2 md:w-[400px] mx-auto">
+        <h1 className="text-2xl font-bold text-foreground">
+          {t("thankYouTitle")}
+        </h1>
         <p className="text-sm text-gray-500">{t("thankYouMessage")}</p>
-        <span
-          className="items-center rounded-full border px-2 py-1 text-sm text-white bg-primary cursor-pointer"
+
+        <Button
+          size="lg"
+          className="w-full cursor-pointer"
           onClick={handleClickThankYouCode}
         >
           {t("thankYouCode")}
-        </span>
+        </Button>
       </div>
     );
   }

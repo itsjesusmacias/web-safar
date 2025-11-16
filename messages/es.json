@@ -112,22 +112,7 @@
   },
   "mission": {
     "title": "¿Por qué quiero crear Safar?",
-    "intro": "No quiero que nadie se quede sin viajar por que no tiene con quien hacerlo. La soledad es dificil hay muchos tipos de soledad y se pasa mal. Con este proyecto quiero ayudar un poco en ese tema.",
-    "aboutMe": {
-      "title": "Hablemos un poco de mi",
-      "content": "Acabo de pasar por una etapa complicada. Ver la realidad de otras personas es complicada y expresarla es aun más dificil.\n\nTengo que reconoceer que me siento solo. Tengo amig@s pero mcuhos tienen compromisos, parejas, hijos, estan trabajando fuera o otros incluso han evolucionado de otra manera y hemos perdudo contacto. Se dice que las personas con las que compartes X % de tu vida son con los compañeros de trabajo, bueno pues yo teletrabajo la mayoria vive fuera de donde residO\n\nNo prentendo quejarme ni victimizarme, hay cosas peores y yo estoy en una situacion muy buena.\n\nLos que me conocen saben que siempre he querido contruir algo, algo que aporte un poco de valor. que ayude a personas.\n\nHace una ssemanas estuve en un evento de empresa en madrid, presencial, y en una conversacion con mi manager me dijo",
-      "quote": "\"pues el viernes me voy a Viena con mi pareja, tienes algun viaje planeado?\"",
-      "contentAfterQuote": "- Pues la verdad que no, me gustaria pero no quiero hacerlo solo\n\nViajar solo no esta mal. Hay quien le encanta hacerlo y ve sus ventajas pero no e slo mio. Admiro produndametne aquien lo hace\n\nVovlendo a casa dije y si creo una plataforma para buscar compañeros ocn los que viajar"
-    },
-    "theIdea": {
-      "title": "La idea",
-      "content": "Un lugar donde puedas encontrar personas afines y organizar viajes sin enredos. Donde todos puedan proponer, editar itinerarios, repartir tareas… y que el plan realmente sucede\n\nQuiero conseguir facilitar las herramitnetas para organizar el viaje\n\nusando IA crear un itirenario",
-      "launchDate": "Mi intencion e sacarlo a mediados de enero de 2026"
-    },
-    "beta": {
-      "title": "Únete a la beta",
-      "description": "Dejame tu contacto y <highlight>Los 50 primeros obtendrán funcionalidades Premium de por vida.</highlight> Únete a la beta y obtén acceso anticipado: crea grupos, publica itinerarios, coordina gastos y tareas, y encuentra personas afines."
-    }
+    "content": "¿Te ha pasado alguna vez que te mueres de ganas por viajar… pero nadie puede acompañarte?\n\nPreguntas a tu mejor amiga, a ese colega que siempre dice “hay que hacer algo”, a tu pareja si la tiene… y nada. Compromisos, excusas, agendas imposibles.\n\nY al final te quedas en casa. Otra vez. Viendo en Instagram cómo otros viven lo que tú querías vivir.\n\nA mí me ha pasado. Más de una vez. Y me harté.\n\nMuchos me han dicho: “Viaja solo, es una experiencia brutal”. Lo respeto. Pero no es mi estilo.\n\nA mí me gusta compartir el camino. Reír en grupo. Perderme con gente que vibra parecido. Gente que no conocía… y que terminan siendo parte del viaje más allá del destino.\n\nPor eso estoy creando Safar.\n\nUna plataforma para organizar viajes y encontrar personas afines con quienes compartirlos.\n\nPublicas un plan. O te apuntas al de otro. Coordinais gastos, tareas, transporte. Y os vais.\n\nSin líos. Sin depender del “a ver si puedo”. Sin quedarte en casa por no tener compañía.\n\nY si te unes ahora a la beta, <highlight>los 100 primeros tendrán funcionalidades Premium de por vida.</highlight>"
   },
   "faq": {
     "title": "Preguntas frecuentes",
