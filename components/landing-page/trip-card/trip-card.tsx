@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 
 interface TripCardProps {
   imageUrl: string;
@@ -14,7 +13,7 @@ const TripCard = ({ imageUrl, title, days, ageRange }: TripCardProps) => {
   return (
     <div className="flex flex-col">
       <div className="relative w-[150px] h-[150px] rounded-lg overflow-hidden shadow-lg">
-        <Image
+        <img
           src={imageUrl}
           alt={title}
           width={150}

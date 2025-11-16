@@ -1,5 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
 
 export const Banner = async () => {
   const t = await getTranslations("home");
@@ -12,7 +11,7 @@ export const Banner = async () => {
         </h3>
         <div className="flex-2 relative">
           <div className="absolute -top-42 left-40 ">
-            <Image
+            <img
               src="/draw/Arrow_01.png"
               alt="Arrow pointing to hero"
               width={160}

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { HTMLAttributes } from "react";
 import { useTranslations } from "next-intl";
 
@@ -51,7 +50,7 @@ export const FloatTrip = ({
       <div className="flex flex-col">
         {/* Card con imagen */}
         <div className="relative w-[150px] h-[150px] rounded-lg overflow-hidden shadow-lg">
-          <Image
+          <img
             src={imageUrl}
             alt={title}
             width={150}

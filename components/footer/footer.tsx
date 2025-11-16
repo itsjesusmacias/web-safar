@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import Image from "next/image";
 import { useCallback } from "react";
 import { EVENTS } from "@/analytics/analytics-keys";
 import Amplitude from "@/analytics/amplitude";
@@ -42,12 +41,7 @@ const Footer = () => {
             aria-label="Instagram"
             onClick={handleClickInstagram}
           >
-            <Image
-              src="/instagram.svg"
-              alt="Instagram"
-              width={20}
-              height={20}
-            />
+            <img src="/instagram.svg" alt="Instagram" width={20} height={20} />
           </a>
         </div>
       </div>

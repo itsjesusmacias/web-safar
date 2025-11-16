@@ -1,9 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { PlanCard } from "@/components/landing-page/plan-card/plan-card";
-import Image from "next/image";
 import { plans } from "./contants";
-import Amplitude from "@/analytics/amplitude";
-import { EVENTS } from "@/analytics/analytics-keys";
 
 const PricingPlans = async () => {
   const t = await getTranslations("pricing");
@@ -18,7 +15,7 @@ const PricingPlans = async () => {
           {t("title")}
         </h2>
 
-        <Image
+        <img
           src="/draw/Underline_06.png"
           alt="Base"
           width={100}

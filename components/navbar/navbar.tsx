@@ -10,7 +10,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Amplitude from "@/analytics/amplitude";
 import { EVENTS } from "@/analytics/analytics-keys";
 
@@ -62,13 +61,7 @@ const NavbarDesktop = ({
         className="flex w-1/3 items-center justify-center"
         onClick={handleClickLogo}
       >
-        <Image
-          src="/safar-logo.png"
-          alt="Safar"
-          width={80}
-          height={40}
-          priority
-        />
+        <img src="/safar-logo.png" alt="Safar" width={80} height={40} />
       </Link>
 
       <div className="flex w-1/3 justify-start gap-6">
@@ -111,12 +104,11 @@ const NavbarMobile = ({
   return (
     <div className="flex w-full items-center justify-between md:hidden">
       <Link href="/" className="flex items-center">
-        <Image
+        <img
           src="/safar-logo.png"
           alt="Safar"
           width={60}
           height={30}
-          priority
           onClick={handleClickLogo}
         />
       </Link>
