@@ -23,6 +23,9 @@ enum EVENTS {
 
   // click on Instagram
   CLICK_INSTAGRAM = "click_instagram",
+
+  // click on thank you code
+  CLICK_THANK_YOU_CODE = "click_thank_you_code",
 }
 
 export { EVENTS };

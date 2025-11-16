@@ -34,7 +34,10 @@
     "emailPlaceholder": "example@gmail.com",
     "button": "I want to sign up for the beta",
     "validationError": "Please enter a value",
-    "successMessage": "Registered: {socialType} - {value}"
+    "successMessage": "Registered: {socialType} - {value}",
+    "thankYouTitle": "Thank you for joining",
+    "thankYouMessage": "We will contact you soon with updates and news.",
+    "thankYouCode": "Launch date January 2026"
   },
   "howItWorks": {
     "title": "Want to travel in a group?",

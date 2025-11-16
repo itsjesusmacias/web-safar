@@ -34,7 +34,10 @@
     "emailPlaceholder": "ejemplo@gmail.com",
     "button": "Quiero apuntarme a la beta",
     "validationError": "Por favor ingresa un valor",
-    "successMessage": "Registrado: {socialType} - {value}"
+    "successMessage": "Registrado: {socialType} - {value}",
+    "thankYouTitle": "Gracias por unirte",
+    "thankYouMessage": "Te contactaremos pronto con novedades y noticias.",
+    "thankYouCode": "Fecha de lanzamiento enero 2026"
   },
   "howItWorks": {
     "title": "¿Quieres viajar en grupo?",
