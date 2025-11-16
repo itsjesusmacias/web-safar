@@ -16,7 +16,7 @@ export const useLocalStorage = <T>(key: string, defaultValue: T) => {
   const [value, setValue] = useState<T>(() => {
     if (typeof window === "undefined") {
       setIsLoading(false);
-      throw new Error("localStorage can be used only in client side");
+      return defaultValue;
     } else {
       try {
         const currentValue = window.localStorage.getItem(key);
