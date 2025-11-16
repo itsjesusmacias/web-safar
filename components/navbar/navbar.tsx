@@ -39,47 +39,54 @@ const NavbarDesktop = ({
   const t = useTranslations("navbar");
 
   return (
-    <div className="hidden w-full items-center justify-center gap-4 md:flex mr-[40px]">
-      <Link
-        href={NAV_LINKS[0].href}
-        className="text-sm font-small transition-colors hover:text-primary max-w-[155px]"
-        onClick={handleClickFAQ}
-      >
-        {t("faq")}
-      </Link>
-      <Link
-        href={NAV_LINKS[1].href}
-        className="text-sm font-small transition-colors hover:text-primary max-w-[155px]"
-        onClick={handleClickPricing}
-      >
-        {t("pricing")}
-      </Link>
+    <div className="hidden w-full items-center md:flex">
+      <div className="flex w-1/3 justify-end gap-6">
+        <Link
+          href={NAV_LINKS[0].href}
+          className="text-sm font-medium transition-colors hover:text-primary"
+          onClick={handleClickFAQ}
+        >
+          {t("faq")}
+        </Link>
+        <Link
+          href={NAV_LINKS[1].href}
+          className="text-sm font-medium transition-colors hover:text-primary"
+          onClick={handleClickPricing}
+        >
+          {t("pricing")}
+        </Link>
+      </div>
 
-      <Link href="/" className="flex items-center mx-6 max-w-[155px]">
+      <Link
+        href="/"
+        className="flex w-1/3 items-center justify-center"
+        onClick={handleClickLogo}
+      >
         <Image
           src="/safar-logo.png"
           alt="Safar"
           width={80}
           height={40}
           priority
-          onClick={handleClickLogo}
         />
       </Link>
 
-      <Link
-        href={NAV_LINKS[2].href}
-        className="text-sm font-small transition-colors hover:text-primary max-w-[155px]"
-        onClick={handleClickHowItWorks}
-      >
-        {t("howItWorks")}
-      </Link>
-      <Link
-        href={NAV_LINKS[3].href}
-        className="text-sm font-small transition-colors hover:text-primary max-w-[155px]"
-        onClick={handleClickBlog}
-      >
-        {t("blog")}
-      </Link>
+      <div className="flex w-1/3 justify-start gap-6">
+        <Link
+          href={NAV_LINKS[2].href}
+          className="text-sm font-medium transition-colors hover:text-primary"
+          onClick={handleClickHowItWorks}
+        >
+          {t("howItWorks")}
+        </Link>
+        <Link
+          href={NAV_LINKS[3].href}
+          className="text-sm font-medium transition-colors hover:text-primary"
+          onClick={handleClickBlog}
+        >
+          {t("blog")}
+        </Link>
+      </div>
     </div>
   );
 };
