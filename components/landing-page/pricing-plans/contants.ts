@@ -8,6 +8,22 @@ const plans = [
         included: true,
       },
       {
+        key: "basicChat",
+        included: true,
+      },
+      {
+        key: "cooldown",
+        included: true,
+      },
+      {
+        key: "visibility",
+        included: true,
+      },
+      {
+        key: "privateGroups",
+        included: false,
+      },
+      {
         key: "aiItineraries",
         included: false,
       },
@@ -22,6 +38,22 @@ const plans = [
         included: true,
       },
       {
+        key: "privateGroups",
+        included: true,
+      },
+      {
+        key: "advancedChat",
+        included: true,
+      },
+      {
+        key: "visibility",
+        included: true,
+      },
+      {
+        key: "cooldown",
+        included: true,
+      },
+      {
         key: "aiItineraries",
         included: false,
       },
@@ -33,6 +65,22 @@ const plans = [
     features: [
       {
         key: "activeGroups",
+        included: true,
+      },
+      {
+        key: "privateGroups",
+        included: true,
+      },
+      {
+        key: "advancedChat",
+        included: true,
+      },
+      {
+        key: "visibility",
+        included: true,
+      },
+      {
+        key: "cooldown",
         included: true,
       },
       {

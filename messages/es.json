@@ -75,25 +75,37 @@
         "price": "0",
         "pricePeriod": "€ /mes",
         "features": {
-          "activeGroups": "1 grupo activo",
+          "activeGroups": "Podrás unirte a 2 grupos activos",
+          "privateGroups": "Grupos privados",
+          "basicChat": "Chat básico",
+          "visibility": "Visibilidad (3 boosts/mes + destacado)",
+          "cooldown": "Cooldown al salir de un grupo (5 días)",
           "aiItineraries": "Genera itinerarios con IA"
         }
       },
       "pro": {
         "name": "PRO",
-        "price": "5,99",
+        "price": "7,99",
         "pricePeriod": "€ /mes",
         "features": {
-          "activeGroups": "3 grupos activos",
+          "activeGroups": "Podrás unirte a 5 grupos activos",
+          "privateGroups": "Podrás crear 2 grupos privados",
+          "advancedChat": "Chat avanzado (encuestas, votaciones, etc.)",
+          "visibility": "Visibilidad (3 boosts/mes + destacado)",
+          "cooldown": "Cooldown al salir de un grupo (2 días)",
           "aiItineraries": "Genera itinerarios con IA"
         }
       },
       "max": {
         "name": "MAX",
-        "price": "9,99",
+        "price": "14,99",
         "pricePeriod": "€ /mes",
         "features": {
-          "activeGroups": "10 grupos activos",
+          "activeGroups": "Podrás unirte a 10 grupos activos",
+          "privateGroups": "Podrás crear 5 grupos privados",
+          "advancedChat": "Chat avanzado (encuestas, votaciones, etc.)",
+          "visibility": "Visibilidad (3 boosts/mes + destacado)",
+          "cooldown": "No hay cooldown al salir de un grupo",
           "aiItineraries": "Genera itinerarios con IA"
         }
       }
